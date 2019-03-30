@@ -114,7 +114,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
+  var output = [];
+  var multiply1 = multiply(multArr[0],multArr[1]);
+  var totalMultiply = multiply1(multiply1[0], multArr[2])[0];
+  output.push(totalMultiply);
+  output.push(multArr[0] + ',' + multArr[1] + ',' + multArr[2] + ' was passed in as an array of numbers, and ' + totalMultiply + ' is their sum.');
+  return output;
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
